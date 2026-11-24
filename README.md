@@ -104,7 +104,7 @@ flowcast/
 ### 1. Clone & Set Up Environment
 
 ```bash
-git clone [https://github.com/akkii01/flowcast.git](https://github.com/akkii01/flowcast.git)
+git clone https://github.com/akkii01/flowcast.git
 cd flowcast
 python -m venv venv
 .\venv\Scripts\Activate
