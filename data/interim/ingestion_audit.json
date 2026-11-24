@@ -1,0 +1,41 @@
+{
+  "calendar_rows": 151,
+  "calendar_date_range": [
+    "2025-01-01",
+    "2025-05-31"
+  ],
+  "weather_rows": 10872,
+  "weather_stations": [
+    "WS-CENTRAL",
+    "WS-NORTH",
+    "WS-SOUTH"
+  ],
+  "weather_missing_temperature": 167,
+  "weather_missing_visibility": 111,
+  "weather_raw_labels": [
+    "CLEAR",
+    "Clear",
+    "Cloudy",
+    "FOG",
+    "Fog",
+    "Overcast",
+    "RAIN",
+    "Rain",
+    "clear",
+    "cloudy",
+    "foggy",
+    "rain ",
+    "rainy"
+  ],
+  "traffic_raw_rows": 178468,
+  "traffic_unique_roads": 25,
+  "traffic_duplicates": 1767,
+  "traffic_null_volume": 4387,
+  "traffic_null_speed": 4382,
+  "traffic_null_occupancy": 4383,
+  "traffic_null_congestion": 26883,
+  "traffic_negative_volume": 241,
+  "traffic_speed_outliers": 237,
+  "traffic_occupancy_outliers": 234,
+  "quarantined_rows_logged": 2479
+}

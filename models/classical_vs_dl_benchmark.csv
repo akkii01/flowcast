@@ -1,0 +1,16 @@
+Family,Task,Model,RMSE,MAE,MAPE,R2,Macro_F1,Accuracy
+Classical ML,Traffic Volume,Linear Regression (NumPy GD),56.7539,39.0954,10.0256,0.961,,
+Classical ML,Traffic Volume,Linear Regression (sklearn),55.2701,37.9781,9.6481,0.963,,
+Classical ML,Traffic Volume,Decision Tree,54.4523,36.5663,8.5669,0.9641,,
+Classical ML,Traffic Volume,Random Forest,52.8974,35.5456,8.2932,0.9661,,
+Classical ML,Traffic Volume,XGBoost,52.5909,35.3674,8.2002,0.9665,,
+Classical ML,Congestion (4-Class),Stage-1 V/C Rule Banding,,,,,0.7715,0.8827
+Classical ML,Congestion (4-Class),SVM Baseline (Calibrated LinearSVC),,,,,0.7256,0.8643
+Classical ML,Congestion (4-Class),Decision Tree,,,,,0.7566,0.8708
+Classical ML,Congestion (4-Class),Random Forest,,,,,0.7715,0.883
+Classical ML,Congestion (4-Class),XGBoost,,,,,0.7704,0.8815
+Classical ML,Congestion (4-Class),XGBoost (Val-Calibrated Multipliers),,,,,0.7748,0.8819
+Deep Learning (PyTorch),Traffic Volume,LSTM (Multi-Task),53.2357,36.4062,9.0984,0.9656,,
+Deep Learning (PyTorch),Congestion (4-Class),LSTM (Multi-Task),,,,,0.7763,0.8844
+Deep Learning (PyTorch),Traffic Volume,BiLSTM (Multi-Task),52.868,35.9739,8.7728,0.9661,,
+Deep Learning (PyTorch),Congestion (4-Class),BiLSTM (Multi-Task),,,,,0.7748,0.8829

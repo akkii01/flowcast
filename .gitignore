@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+data/raw/*.csv
+data/interim/*.parquet
+data/processed/*.parquet
+.pytest_cache/
+.ipynb_checkpoints/
+unvibecode_results/
+.unvibecode*

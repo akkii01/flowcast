@@ -1,0 +1,67 @@
+{
+  "model_id": "accident_risk_classical_winner",
+  "version": "1.0.0",
+  "created_utc": "2026-11-23T10:57:01Z",
+  "task": "Accident Risk Binary Classification",
+  "algorithm": "Random Forest",
+  "training_window": [
+    "2025-01-08 00:00:00+00:00",
+    "2025-04-18 18:30:00+00:00"
+  ],
+  "test_window": [
+    "2025-05-10 09:30:00+00:00",
+    "2025-05-31 23:30:00+00:00"
+  ],
+  "num_features": 30,
+  "features": [
+    "visibility",
+    "rainfall",
+    "temperature",
+    "is_rain",
+    "is_fog",
+    "is_low_visibility",
+    "weather_clear",
+    "weather_cloudy",
+    "weather_fog",
+    "weather_rain",
+    "is_peak",
+    "is_weekend",
+    "hour_sin",
+    "hour_cos",
+    "public_holiday",
+    "event_flag",
+    "roadwork_flag",
+    "rain_x_peak",
+    "low_vis_x_peak",
+    "pred_vc_s1",
+    "pred_vol_s1",
+    "rain_x_pred_vc_s1",
+    "fog_x_pred_vc_s1",
+    "base_vc_mean",
+    "road_hist_acc_rate",
+    "inv_vis_x_base_vc",
+    "speed_lag_1",
+    "occ_lag_1",
+    "vc_ratio_lag_1",
+    "acc_roll_sum_48"
+  ],
+  "hyperparameters": {
+    "winner": "Random Forest",
+    "operating_threshold": 0.71
+  },
+  "validation_metrics": {
+    "ROC_AUC": 0.5856,
+    "F1": 0.0446,
+    "Precision": 0.0257,
+    "Recall": 0.1674,
+    "Threshold": 0.71
+  },
+  "test_metrics": {
+    "ROC_AUC": 0.6383,
+    "F1": 0.0519,
+    "Precision": 0.0296,
+    "Recall": 0.2103,
+    "Threshold": 0.71
+  },
+  "selection_rationale": "Selected Random Forest on curated high-signal risk features based on highest validation ROC-AUC (0.5856)."
+}

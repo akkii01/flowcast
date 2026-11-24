@@ -1,0 +1,61 @@
+project:
+  name: "FlowCast: Smart Traffic Flow Prediction Platform"
+  corridor: "Northline Corridor"
+  version: "1.0.0"
+  random_seed: 42
+
+paths:
+  raw_calendar: "data/raw/calendar_events.csv"
+  raw_weather: "data/raw/weather_observations.csv"
+  raw_traffic: "data/raw/traffic_sensor_log.csv"
+  quarantine_traffic: "data/interim/quarantine_traffic_defects.csv"
+  ingestion_audit: "data/interim/ingestion_audit.json"
+  cleaned_merged: "data/interim/merged_clean.parquet"
+  processed_features: "data/processed/flowcast_features.parquet"
+  data_quality_report: "reports/data_quality.md"
+  figures_dir: "reports/figures"
+  models_dir: "models"
+
+cleaning:
+  min_volume: 0
+  min_speed: 1.0
+  max_speed: 200.0
+  min_occupancy: 0.0
+  max_occupancy: 100.0
+  interpolation_limit: 4
+  weather_interpolation_limit: 6
+  zscore_threshold: 4.0
+  weather_mapping:
+    clear: "Clear"
+    cloudy: "Cloudy"
+    overcast: "Cloudy"
+    rain: "Rain"
+    rainy: "Rain"
+    fog: "Fog"
+    foggy: "Fog"
+  congestion_thresholds:
+    free_flow_max: 0.50
+    moderate_max: 0.80
+    heavy_max: 1.00
+
+features:
+  lags: [1, 2, 48]
+  rolling_windows: [4, 8]
+  peak_morning_hours: [7, 8, 9, 10]
+  peak_evening_hours: [17, 18, 19, 20]
+  low_visibility_threshold: 2000.0
+
+splitting:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+deep_learning:
+  seq_length: 12
+  hidden_size: 64
+  num_layers: 2
+  dropout: 0.2
+  learning_rate: 0.001
+  batch_size: 256
+  epochs: 25
+  patience: 5
