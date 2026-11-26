@@ -37,7 +37,7 @@ FlowCast transforms raw half-hourly inductive-loop/radar telemetry, hourly weath
 | Classical ML | Traffic Volume | XGBoost | **52.59** | **8.20%** | **0.9665** | — | — |
 | Deep Learning (PyTorch) | Traffic Volume | LSTM (Multi-Task) | 53.24 | 9.10% | 0.9656 | — | — |
 | Deep Learning (PyTorch) | Traffic Volume | BiLSTM (Multi-Task) | 52.87 | 8.77% | 0.9661 | — | — |
-| Classical ML | Congestion (4-Class) | XGBoost (Val-Calibrated) | — | — | — | 0.7256 | 86.43% |
+| Classical ML | Congestion (4-Class) | XGBoost (Val-Calibrated) | — | — | — | 0.7748 | 88.19% |
 | Deep Learning (PyTorch) | Congestion (4-Class) | LSTM (Multi-Task) | — | — | — | **0.7763** | **88.44%** |
 
 ### Honest Model Selection & Signal-Ceiling Analysis

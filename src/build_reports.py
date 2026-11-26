@@ -196,7 +196,7 @@ def generate_final_technical_report(config: dict) -> None:
     vol_xgb = classical_sb[(classical_sb["Task"] == "Traffic Volume") & (classical_sb["Model"] == "XGBoost")].iloc[0]
     vol_gd = classical_sb[(classical_sb["Task"] == "Traffic Volume") & (classical_sb["Model"] == "Linear Regression (NumPy GD)")].iloc[0]
     tt_xgb = classical_sb[(classical_sb["Task"] == "Travel Time") & (classical_sb["Model"] == "XGBoost")].iloc[0]
-    cong_xgb = classical_sb[(classical_sb["Task"] == "Congestion (4-Class)") & (classical_sb["Model"].str.contains("Calibrated"))].iloc[0]
+    cong_xgb = classical_sb[(classical_sb["Task"] == "Congestion (4-Class)") & (classical_sb["Model"].str.contains("Val-Calibrated"))].iloc[0]
     acc_xgb = classical_sb[(classical_sb["Task"] == "Accident Risk (Binary)") & (classical_sb["Model"].str.contains("XGBoost"))].iloc[0]
     dl_lstm_v = bench_df[(bench_df["Model"] == "LSTM (Multi-Task)") & (bench_df["Task"] == "Traffic Volume")].iloc[0]
     dl_bilstm_v = bench_df[(bench_df["Model"] == "BiLSTM (Multi-Task)") & (bench_df["Task"] == "Traffic Volume")].iloc[0]
